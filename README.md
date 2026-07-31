@@ -1,144 +1,150 @@
 # 🩺 Multiple Disease Prediction System
 
-An AI-based healthcare prediction web application that uses Machine Learning models to predict the possibility of **Heart Disease, Diabetes, and Parkinson Disease**.
+A Machine Learning-based healthcare application that predicts the possibility of multiple diseases using patient health parameters. The system provides quick predictions for diseases such as Heart Disease, Diabetes, and Parkinson's Disease using trained machine learning models.
 
-The application provides an interactive user interface built with **Streamlit** and uses trained ML classification models for real-time predictions.
+## 🚀 Features
 
----
+* ❤️ Heart Disease Prediction
 
-# 🚀 Live Demo
+  * Predicts heart disease risk based on medical parameters.
 
-Streamlit App:
+* 🩸 Diabetes Prediction
 
-https://your-streamlit-link.streamlit.app/
+  * Analyzes patient health information to predict diabetes risk.
 
----
+* 🧠 Parkinson's Disease Prediction
 
-# 📌 Features
+  * Uses patient voice-related features to predict Parkinson's disease.
 
-### ❤️ Heart Disease Prediction
-- Predicts heart disease risk using patient medical parameters.
-- Uses a Machine Learning classification model.
+* 🌐 Web Application
 
-### 🩸 Diabetes Prediction
-- Predicts diabetes possibility based on health-related features.
+  * Interactive interface for entering details and viewing prediction results.
 
-### 🧠 Parkinson Disease Prediction
-- Uses voice measurement features to predict Parkinson disease.
+## 🛠️ Technologies Used
 
-### 🎨 User Interface
-- Clean Streamlit dashboard
-- Sidebar navigation
-- Multiple prediction modules
-- Interactive input forms
-- Real-time results
+* Python
+* Streamlit
+* Scikit-learn
+* Pandas
+* NumPy
+* Machine Learning
+* Matplotlib
+* Seaborn
+* Joblib
 
----
+## 📂 Project Structure
 
-# 🛠️ Technologies Used
-
-## Programming Language
-- Python
-
-## Framework
-- Streamlit
-
-## Machine Learning
-- Scikit-learn
-- Classification Algorithms
-
-## Data Processing
-- Pandas
-- NumPy
-
-## Model Saving
-- Joblib
-
----
-
-# 📂 Project Structure
-
-
-Multiple-Disease-Prediction-System
-
+```text
+Multiple-Disease-Prediction-System/
 │
-├── streamlit_app.py # Main Streamlit application
-│
+├── streamlit_app.py
 ├── models/
-│ ├── heart_model.pkl # Heart disease model
-│ ├── diabetes_model.pkl # Diabetes model
-│ └── parkinson_model.pkl # Parkinson model
+│   ├── heart_model.pkl
+│   ├── diabetes_model.pkl
+│   └── parkinson_model.pkl
 │
 ├── dataset/
-│ ├── heart.csv
-│ ├── diabetes.csv
-│ └── parkinson.csv
-│
 ├── training/
-│ └── Model training files
-│
 ├── analysis/
-│ └── Exploratory Data Analysis
-│
 ├── requirements.txt
-│
 └── README.md
+```
 
+## ⚙️ Installation & Setup
 
----
-
-# ⚙️ Installation and Setup
-
-Clone the repository:
+### 1. Clone Repository
 
 ```bash
-git clone https://github.com/ananyadevanga139-jpg/Multiple-Disease-Prediction-System.git
+git clone https://github.com/your-username/Multiple-Disease-Prediction-System.git
+```
 
-Go inside the project:
+### 2. Navigate to Project Folder
 
+```bash
 cd Multiple-Disease-Prediction-System
+```
 
-Create virtual environment:
+### 3. Create Virtual Environment
 
+```bash
 python -m venv venv
+```
 
-Activate environment:
+### 4. Activate Environment
 
 Windows:
 
+```bash
 venv\Scripts\activate
+```
 
-Install dependencies:
+### 5. Install Dependencies
 
+```bash
 pip install -r requirements.txt
-▶️ Run Application
+```
 
-Start Streamlit:
+### 6. Run Application
 
+```bash
 streamlit run streamlit_app.py
+```
 
 The application will open in your browser:
 
+```text
 http://localhost:8501
-📊 Machine Learning Workflow
-Data Collection
-Data Preprocessing
-Exploratory Data Analysis
-Model Training
-Model Evaluation
-Model Saving using Joblib
-Streamlit Deployment
-📈 Models
-Disease	Model
-Heart Disease	Machine Learning Classification Model
-Diabetes	Machine Learning Classification Model
-Parkinson Disease	Machine Learning Classification Model
-🎯 Future Enhancements
-Add deep learning models
-Add patient history storage
-Add doctor recommendation system
-Improve UI design
-Add cloud database integration
-👩‍💻 Developer
+```
 
-Ananya K
+## ☁️ Deployment
+
+The application is deployed using **Streamlit Cloud**.
+
+Deployment Steps:
+
+1. Upload project to GitHub repository.
+2. Connect GitHub repository with Streamlit Cloud.
+3. Select `streamlit_app.py` as the main application file.
+4. Install dependencies from `requirements.txt`.
+5. Deploy the application online.
+
+## 📌 Machine Learning Models
+
+### Heart Disease Model
+
+* Algorithm: Machine Learning Classification Model
+* Model File:
+
+```text
+heart_model.pkl
+```
+
+### Diabetes Prediction Model
+
+* Algorithm: Machine Learning Classification Model
+* Model File:
+
+```text
+diabetes_model.pkl
+```
+
+### Parkinson's Disease Model
+
+* Algorithm: Machine Learning Classification Model
+* Model File:
+
+```text
+parkinson_model.pkl
+```
+
+## 🎯 Future Enhancements
+
+* Add more disease prediction modules.
+* Improve model accuracy using advanced algorithms.
+* Add user authentication.
+* Store prediction history.
+* Integrate healthcare APIs.
+
+## 👩‍💻 Developed By
+
+**Ananya K**
