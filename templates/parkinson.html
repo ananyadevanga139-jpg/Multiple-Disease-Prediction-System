@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Parkinson Disease Prediction
+</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<h2>
+🧠 Parkinson Disease Prediction
+</h2>
+
+<p>
+AI Based Healthcare System
+</p>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<form action="/predict_parkinson" method="POST">
+
+
+<input name="Fo" placeholder="MDVP Fo(Hz)" required>
+
+<input name="Fhi" placeholder="MDVP Fhi(Hz)" required>
+
+<input name="Flo" placeholder="MDVP Flo(Hz)" required>
+
+<input name="Jitter" placeholder="MDVP Jitter %" required>
+
+<input name="Jitter_Abs" placeholder="MDVP Jitter Abs" required>
+
+<input name="RAP" placeholder="MDVP RAP" required>
+
+<input name="PPQ" placeholder="MDVP PPQ" required>
+
+<input name="DDP" placeholder="Jitter DDP" required>
+
+<input name="Shimmer" placeholder="MDVP Shimmer" required>
+
+<input name="Shimmer_dB" placeholder="MDVP Shimmer dB" required>
+
+<input name="APQ3" placeholder="Shimmer APQ3" required>
+
+<input name="APQ5" placeholder="Shimmer APQ5" required>
+
+<input name="APQ" placeholder="MDVP APQ" required>
+
+<input name="DDA" placeholder="Shimmer DDA" required>
+
+<input name="NHR" placeholder="NHR" required>
+
+<input name="HNR" placeholder="HNR" required>
+
+<input name="RPDE" placeholder="RPDE" required>
+
+<input name="DFA" placeholder="DFA" required>
+
+<input name="spread1" placeholder="Spread 1" required>
+
+<input name="spread2" placeholder="Spread 2" required>
+
+<input name="D2" placeholder="D2" required>
+
+<input name="PPE" placeholder="PPE" required>
+
+
+
+<button type="submit">
+
+Predict Parkinson Disease
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+<footer>
+
+<p>
+© 2026 Multiple Disease Prediction System
+<br>
+Developed by Ananya K
+</p>
+
+</footer>
+
+
+</body>
+
+</html>

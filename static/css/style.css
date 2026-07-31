@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+body{
+
+    background:#f4f9ff;
+    color:#333;
+
+}
+
+
+
+/* =========================
+        Navigation
+========================= */
+
+
+nav{
+
+    background:linear-gradient(
+        90deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+
+
+nav h2{
+
+    font-size:30px;
+
+}
+
+
+
+nav p{
+
+    font-size:16px;
+
+}
+
+
+
+
+/* =========================
+        Hero Section
+========================= */
+
+
+.hero{
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+
+    url("/static/images/background.jpeg");
+
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:100px 20px;
+
+    color:white;
+
+    text-align:center;
+
+
+}
+
+
+
+.hero h1{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:18px;
+
+}
+
+
+
+/* =========================
+        Container
+========================= */
+
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.container h1{
+
+    color:#0d47a1;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+/* =========================
+        Disease Cards
+========================= */
+
+
+.disease-container{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:40px;
+
+
+}
+
+
+
+
+.disease-card{
+
+
+    background:white;
+
+    width:550px;
+
+    max-width:95%;
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+.disease-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.disease-card img{
+
+
+    width:250px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.disease-card h2{
+
+    color:#1565c0;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.disease-card p{
+
+    color:#555;
+
+}
+
+
+
+.disease-card a{
+
+
+    display:inline-block;
+
+    margin-top:20px;
+
+
+    padding:13px 35px;
+
+
+    background:#1565c0;
+
+
+    color:white;
+
+
+    border-radius:30px;
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+.disease-card a:hover{
+
+    background:#0d47a1;
+
+}
+
+
+
+
+
+/* =========================
+        About Section
+========================= */
+
+
+.about{
+
+
+    width:80%;
+
+    margin:40px auto;
+
+
+    background:white;
+
+
+    padding:40px;
+
+
+    border-radius:25px;
+
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+    text-align:center;
+
+
+}
+
+
+
+.about h2{
+
+    color:#1565c0;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+/* =========================
+        Forms
+========================= */
+
+
+form{
+
+
+    background:white;
+
+
+    width:450px;
+
+
+    max-width:95%;
+
+
+    margin:30px auto;
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+form input{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    margin:10px 0;
+
+
+    border-radius:10px;
+
+
+    border:1px solid #ccc;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+form input:focus{
+
+
+    border-color:#1565c0;
+
+    outline:none;
+
+
+}
+
+
+
+
+
+button{
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    margin-top:20px;
+
+
+    border:none;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #1565c0,
+        #42a5f5
+    );
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+button:hover{
+
+
+    background:#0d47a1;
+
+
+}
+
+
+
+
+/* =========================
+        Result Page
+========================= */
+
+
+.result-box{
+
+
+    background:white;
+
+
+    width:550px;
+
+
+    max-width:95%;
+
+
+    margin:50px auto;
+
+
+    padding:40px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+.healthy{
+
+
+    color:#2e7d32;
+
+
+    background:#e8f5e9;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+
+.danger{
+
+
+    color:#c62828;
+
+
+    background:#ffebee;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+
+.back-btn{
+
+
+    display:inline-block;
+
+
+    margin:15px;
+
+
+    padding:12px 30px;
+
+
+    background:#1565c0;
+
+
+    color:white;
+
+
+    border-radius:30px;
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+.back-btn:hover{
+
+
+    background:#0d47a1;
+
+
+}
+
+
+
+
+
+/* =========================
+        Footer
+========================= */
+
+
+footer{
+
+
+    background:#0d47a1;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    padding:20px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+/* =========================
+        Mobile Design
+========================= */
+
+
+@media(max-width:600px){
+
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+
+    .disease-card{
+
+        width:95%;
+
+    }
+
+
+    .about{
+
+        width:95%;
+
+    }
+
+
+    nav h2{
+
+        font-size:22px;
+
+    }
+
+
+}

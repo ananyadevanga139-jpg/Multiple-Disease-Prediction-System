@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Prediction Result
+</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<h2>
+🩺 AI Disease Prediction Result
+</h2>
+
+<p>
+Developed by Ananya K
+</p>
+
+</nav>
+
+
+
+
+<div class="container">
+
+
+<div class="result-box">
+
+
+{% if "No" in prediction %}
+
+
+<h1 class="healthy">
+
+✅ {{ prediction }}
+
+</h1>
+
+
+<p>
+
+The model predicts a low risk condition.
+
+</p>
+
+
+
+{% else %}
+
+
+<h1 class="danger">
+
+⚠️ {{ prediction }}
+
+</h1>
+
+
+<p>
+
+The model detected possible risk.
+Please consult a medical professional.
+
+</p>
+
+
+{% endif %}
+
+
+
+
+<h2>
+Confidence:
+</h2>
+
+
+<h1>
+
+{{ confidence }}%
+
+</h1>
+
+
+
+
+<h2>
+Medical Advice
+</h2>
+
+
+<p>
+
+{{ advice }}
+
+</p>
+
+
+
+
+<a href="/" class="back-btn">
+
+🏠 Back To Home
+
+</a>
+
+
+
+<a href="javascript:history.back()" class="back-btn">
+
+🔄 Try Again
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+<p>
+
+© 2026 Multiple Disease Prediction System
+
+<br>
+
+Developed by Ananya K
+
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
