@@ -1,29 +1,11 @@
 import streamlit as st
-import pickle
 import numpy as np
+import joblib
 
 
-# -----------------------------
-# Load Models
-# -----------------------------
-
-heart_model = pickle.load(
-    open("models/heart_model.pkl", "rb")
-)
-
-diabetes_model = pickle.load(
-    open("models/diabetes_model.pkl", "rb")
-)
-
-parkinson_model = pickle.load(
-    open("models/parkinson_model.pkl", "rb")
-)
-
-
-
-# -----------------------------
-# Page Configuration
-# -----------------------------
+# ==============================
+# PAGE CONFIG
+# ==============================
 
 st.set_page_config(
     page_title="Multiple Disease Prediction System",
@@ -32,161 +14,448 @@ st.set_page_config(
 )
 
 
-st.title("🩺 Multiple Disease Prediction System")
+# ==============================
+# CUSTOM CSS
+# ==============================
 
-st.write(
-    "AI-based prediction system for Heart Disease, Diabetes and Parkinson's Disease"
+st.markdown("""
+<style>
+
+body {
+    background-color:#f5f7fb;
+}
+
+.main-title {
+    font-size:42px;
+    font-weight:bold;
+    text-align:center;
+    color:#1f4e79;
+}
+
+.sub-title {
+    text-align:center;
+    font-size:20px;
+    color:#555;
+}
+
+.card {
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+    margin:10px;
+}
+
+.result {
+    background:#e8f5e9;
+    padding:20px;
+    border-radius:12px;
+    color:#1b5e20;
+    font-size:20px;
+}
+
+.footer {
+    text-align:center;
+    color:#777;
+    margin-top:50px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
+# ==============================
+# LOAD MODELS
+# ==============================
+
+heart_model = joblib.load(
+    "models/heart_model.pkl"
+)
+
+diabetes_model = joblib.load(
+    "models/diabetes_model.pkl"
+)
+
+parkinson_model = joblib.load(
+    "models/parkinson_model.pkl"
 )
 
 
 
-# -----------------------------
-# Sidebar
-# -----------------------------
+# ==============================
+# HEADER
+# ==============================
 
-option = st.sidebar.selectbox(
-    "Select Disease",
+st.markdown(
+"""
+<div class="main-title">
+🩺 Multiple Disease Prediction System
+</div>
+
+<div class="sub-title">
+AI Based Healthcare Prediction using Machine Learning
+</div>
+""",
+unsafe_allow_html=True
+)
+
+
+st.write("")
+
+
+
+# ==============================
+# SIDEBAR
+# ==============================
+
+menu = st.sidebar.selectbox(
+    "Navigation",
     [
-        "Heart Disease",
-        "Diabetes",
-        "Parkinson Disease"
+        "🏠 Home",
+        "❤️ Heart Disease",
+        "🩸 Diabetes Disease",
+        "🧠 Parkinson Disease",
+        "📌 About Project"
     ]
 )
 
 
 
-# -----------------------------
-# Heart Prediction
-# -----------------------------
+# ==============================
+# HOME PAGE
+# ==============================
 
-if option == "Heart Disease":
+if menu == "🏠 Home":
+
+    st.markdown("""
+    <div class="card">
+
+    ## Welcome 👋
+
+    This application predicts three major diseases using
+    Machine Learning algorithms.
+
+    ### Available Predictions:
+
+    ❤️ Heart Disease Prediction
+
+    🩸 Diabetes Prediction
+
+    🧠 Parkinson Disease Prediction
+
+
+    </div>
+
+    """,
+    unsafe_allow_html=True)
+
+
+
+    col1,col2,col3 = st.columns(3)
+
+
+    with col1:
+        st.info(
+            """
+            ❤️ Heart Disease
+
+            Predict cardiovascular disease risk
+            based on medical parameters.
+            """
+        )
+
+
+    with col2:
+        st.success(
+            """
+            🩸 Diabetes
+
+            Predict diabetes possibility
+            using patient information.
+            """
+        )
+
+
+    with col3:
+        st.warning(
+            """
+            🧠 Parkinson
+
+            Predict Parkinson disease
+            using voice measurements.
+            """
+        )
+
+
+
+# ==============================
+# HEART DISEASE
+# ==============================
+
+
+elif menu == "❤️ Heart Disease":
+
 
     st.header("❤️ Heart Disease Prediction")
 
 
-    age = st.number_input("Age")
-    sex = st.number_input("Sex (0-Female, 1-Male)")
-    cp = st.number_input("Chest Pain Type")
-    trestbps = st.number_input("Resting Blood Pressure")
-    chol = st.number_input("Cholesterol")
-    fbs = st.number_input("Fasting Blood Sugar")
-    restecg = st.number_input("Rest ECG")
-    thalach = st.number_input("Maximum Heart Rate")
-    exang = st.number_input("Exercise Induced Angina")
-    oldpeak = st.number_input("Old Peak")
-    slope = st.number_input("Slope")
-    ca = st.number_input("Major Vessels")
-    thal = st.number_input("Thal")
+    col1,col2 = st.columns(2)
+
+
+    with col1:
+
+        age = st.number_input(
+            "Age",
+            1,
+            100
+        )
+
+        sex = st.selectbox(
+            "Gender",
+            [0,1]
+        )
+
+        cp = st.number_input(
+            "Chest Pain Type"
+        )
+
+        trestbps = st.number_input(
+            "Blood Pressure"
+        )
+
+        chol = st.number_input(
+            "Cholesterol"
+        )
+
+        fbs = st.number_input(
+            "Fasting Blood Sugar"
+        )
+
+
+    with col2:
+
+        restecg = st.number_input(
+            "Rest ECG"
+        )
+
+        thalach = st.number_input(
+            "Maximum Heart Rate"
+        )
+
+        exang = st.number_input(
+            "Exercise Angina"
+        )
+
+        oldpeak = st.number_input(
+            "Old Peak"
+        )
+
+        slope = st.number_input(
+            "Slope"
+        )
+
+        ca = st.number_input(
+            "Number of vessels"
+        )
 
 
     if st.button("Predict Heart Disease"):
 
-        data = np.array(
-            [[
-                age, sex, cp, trestbps,
-                chol, fbs, restecg,
-                thalach, exang, oldpeak,
-                slope, ca, thal
-            ]]
-        )
+
+        data=np.array(
+        [
+        age,sex,cp,trestbps,
+        chol,fbs,restecg,
+        thalach,exang,
+        oldpeak,slope,ca
+        ]
+        ).reshape(1,-1)
 
 
         prediction = heart_model.predict(data)
 
 
-        if prediction[0] == 1:
-            st.error("⚠️ High Risk of Heart Disease")
+        if prediction[0]==1:
+            st.error(
+            "⚠️ High Risk of Heart Disease"
+            )
+
         else:
-            st.success("✅ Low Risk of Heart Disease")
+            st.success(
+            "✅ No Heart Disease Detected"
+            )
 
 
 
-# -----------------------------
-# Diabetes Prediction
-# -----------------------------
+# ==============================
+# DIABETES
+# ==============================
 
-elif option == "Diabetes":
+
+elif menu == "🩸 Diabetes Disease":
+
 
     st.header("🩸 Diabetes Prediction")
 
 
-    pregnancies = st.number_input("Pregnancies")
-    glucose = st.number_input("Glucose")
-    bp = st.number_input("Blood Pressure")
-    skin = st.number_input("Skin Thickness")
-    insulin = st.number_input("Insulin")
-    bmi = st.number_input("BMI")
-    diabetes = st.number_input("Diabetes Pedigree Function")
-    age = st.number_input("Age")
+    values=[]
+
+
+    fields=[
+    "Pregnancies",
+    "Glucose",
+    "Blood Pressure",
+    "Skin Thickness",
+    "Insulin",
+    "BMI",
+    "Diabetes Pedigree",
+    "Age"
+    ]
+
+
+    for f in fields:
+        values.append(
+            st.number_input(f)
+        )
+
 
 
     if st.button("Predict Diabetes"):
 
 
-        data = np.array(
-            [[
-                pregnancies,
-                glucose,
-                bp,
-                skin,
-                insulin,
-                bmi,
-                diabetes,
-                age
-            ]]
-        )
+        data=np.array(values).reshape(1,-1)
 
 
-        prediction = diabetes_model.predict(data)
+        result=diabetes_model.predict(data)
 
 
-        if prediction[0] == 1:
-            st.error("⚠️ Diabetes Detected")
+        if result[0]==1:
+            st.error(
+            "⚠️ Diabetes Risk Detected"
+            )
+
         else:
-            st.success("✅ No Diabetes Detected")
+            st.success(
+            "✅ No Diabetes Detected"
+            )
 
 
 
-# -----------------------------
-# Parkinson Prediction
-# -----------------------------
+# ==============================
+# PARKINSON
+# ==============================
 
-else:
+
+elif menu == "🧠 Parkinson Disease":
+
 
     st.header("🧠 Parkinson Disease Prediction")
 
 
-    features = st.text_area(
-        "Enter Parkinson features separated by comma"
+    st.write(
+    "Enter voice measurement values"
     )
 
 
-    if st.button("Predict Parkinson Disease"):
-
-        try:
-
-            values = [
-                float(x)
-                for x in features.split(",")
-            ]
+    values=[]
 
 
-            data = np.array(
-                [values]
+    for i in range(22):
+
+        values.append(
+            st.number_input(
+                f"Feature {i+1}"
+            )
+        )
+
+
+
+    if st.button("Predict Parkinson"):
+
+
+        data=np.array(values).reshape(1,-1)
+
+
+        result=parkinson_model.predict(data)
+
+
+        if result[0]==1:
+            st.error(
+            "⚠️ Parkinson Disease Detected"
+            )
+
+        else:
+            st.success(
+            "✅ No Parkinson Disease Detected"
             )
 
 
-            prediction = parkinson_model.predict(data)
+
+# ==============================
+# ABOUT
+# ==============================
 
 
-            if prediction[0] == 1:
-                st.error("⚠️ Parkinson Disease Detected")
-            else:
-                st.success("✅ No Parkinson Disease Detected")
+elif menu == "📌 About Project":
 
 
-        except:
+    st.header("📌 About Project")
 
-            st.warning(
-                "Please enter valid numeric values"
-            )
+
+    st.markdown("""
+    <div class="card">
+
+    ### Multiple Disease Prediction System
+
+    **Technologies Used**
+
+    - Python
+    - Streamlit
+    - Machine Learning
+    - Scikit-learn
+    - Pandas
+    - NumPy
+
+
+    ### Machine Learning Models
+
+    ❤️ Heart Disease - Classification Model
+
+    🩸 Diabetes - Classification Model
+
+    🧠 Parkinson - Classification Model
+
+
+    ### Developer
+
+    Ananya K
+
+    Information Science and Engineering
+
+    AMC Engineering College
+
+
+    </div>
+
+    """,
+    unsafe_allow_html=True)
+
+
+
+# ==============================
+# FOOTER
+# ==============================
+
+
+st.markdown(
+"""
+<div class="footer">
+
+© 2026 Multiple Disease Prediction System  
+Developed by Ananya K
+
+</div>
+""",
+unsafe_allow_html=True
+)
