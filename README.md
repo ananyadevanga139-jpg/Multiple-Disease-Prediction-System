@@ -1,150 +1,237 @@
-# 🩺 Multiple Disease Prediction System
+# 🏥 Multiple Disease Prediction System
 
-A Machine Learning-based healthcare application that predicts the possibility of multiple diseases using patient health parameters. The system provides quick predictions for diseases such as Heart Disease, Diabetes, and Parkinson's Disease using trained machine learning models.
+<p align="center">
 
-## 🚀 Features
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&lines=Multiple+Disease+Prediction+System;AI+Powered+Healthcare+Solution;Machine+Learning+%26+Deep+Learning"/>
 
-* ❤️ Heart Disease Prediction
+</p>
 
-  * Predicts heart disease risk based on medical parameters.
 
-* 🩸 Diabetes Prediction
+<p align="center">
 
-  * Analyzes patient health information to predict diabetes risk.
+An AI-based healthcare prediction system that uses machine learning and deep learning techniques to analyze medical data and predict multiple diseases.
 
-* 🧠 Parkinson's Disease Prediction
+</p>
 
-  * Uses patient voice-related features to predict Parkinson's disease.
 
-* 🌐 Web Application
+---
 
-  * Interactive interface for entering details and viewing prediction results.
+# 🌐 Live Demo
 
-## 🛠️ Technologies Used
+🚀 Application:
 
-* Python
-* Streamlit
-* Scikit-learn
-* Pandas
-* NumPy
-* Machine Learning
-* Matplotlib
-* Seaborn
-* Joblib
+(Add your deployment link here)
 
-## 📂 Project Structure
 
-```text
-Multiple-Disease-Prediction-System/
-│
-├── streamlit_app.py
-├── models/
-│   ├── heart_model.pkl
-│   ├── diabetes_model.pkl
-│   └── parkinson_model.pkl
-│
-├── dataset/
-├── training/
-├── analysis/
-├── requirements.txt
-└── README.md
-```
+---
 
-## ⚙️ Installation & Setup
+# ✨ Features
 
-### 1. Clone Repository
+✅ Multiple disease prediction  
+✅ Machine learning based healthcare analysis  
+✅ Deep learning model integration  
+✅ User-friendly interface  
+✅ Fast prediction results  
+✅ Data preprocessing and model evaluation  
+✅ AI-assisted healthcare insights  
+
+
+---
+
+# 🛠️ Tech Stack
+
+
+## 🎨 Frontend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=html,css,javascript"/>
+
+</p>
+
+
+Technologies:
+
+- HTML
+- CSS
+- JavaScript
+
+
+---
+
+## ⚙️ Backend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=python,flask"/>
+
+</p>
+
+
+Technologies:
+
+- Python
+- Flask
+
+
+---
+
+## 🤖 AI & Machine Learning
+
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=tensorflow,python"/>
+
+</p>
+
+
+Technologies:
+
+- TensorFlow
+- Keras
+- Scikit-learn
+- OpenCV
+- NumPy
+- Pandas
+- Machine Learning Models
+- Deep Learning Models
+
+
+---
+
+# 🩺 Supported Predictions
+
+
+The system includes prediction models for:
+
+
+### ❤️ Heart Disease Prediction
+
+Analyzes patient health parameters to predict the possibility of heart disease.
+
+
+### 🩸 Diabetes Prediction
+
+Uses medical features to identify diabetes risk.
+
+
+### 🧠 Parkinson's Disease Prediction
+
+Analyzes relevant medical attributes for Parkinson's disease prediction.
+
+
+
+---
+
+# 🚀 Installation & Setup
+
+
+## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Multiple-Disease-Prediction-System.git
-```
-
-### 2. Navigate to Project Folder
-
-```bash
+git clone https://github.com/ananyadevanga139-jpg/Multiple-Disease-Prediction-System.git
+Navigate to Project
 cd Multiple-Disease-Prediction-System
-```
-
-### 3. Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### 4. Activate Environment
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### 5. Install Dependencies
-
-```bash
+Install Dependencies
 pip install -r requirements.txt
-```
+Run Application
+python app.py
 
-### 6. Run Application
+Application runs on:
 
-```bash
-streamlit run streamlit_app.py
-```
+http://127.0.0.1:5000
+🧠 Machine Learning Workflow
+Dataset Collection
+        ↓
+Data Preprocessing
+        ↓
+Exploratory Data Analysis
+        ↓
+Feature Selection
+        ↓
+Model Training
+        ↓
+Model Evaluation
+        ↓
+Disease Prediction
+📊 Model Performance
+Heart Disease Model
 
-The application will open in your browser:
+Accuracy: 83%
 
-```text
-http://localhost:8501
-```
+Diabetes Prediction Model
 
-## ☁️ Deployment
+Accuracy: 88%
 
-The application is deployed using **Streamlit Cloud**.
+Parkinson's Disease Model
 
-Deployment Steps:
+Accuracy: 87%
 
-1. Upload project to GitHub repository.
-2. Connect GitHub repository with Streamlit Cloud.
-3. Select `streamlit_app.py` as the main application file.
-4. Install dependencies from `requirements.txt`.
-5. Deploy the application online.
+📂 Project Structure
+Multiple-Disease-Prediction-System
 
-## 📌 Machine Learning Models
+│
+├── app.py
+│
+├── models
+│   ├── heart_model
+│   ├── diabetes_model
+│   └── parkinsons_model
+│
+├── datasets
+│   ├── heart.csv
+│   ├── diabetes.csv
+│   └── parkinsons.csv
+│
+├── templates
+│   └── index.html
+│
+├── static
+│   ├── css
+│   └── images
+│
+├── requirements.txt
+│
+└── README.md
+📸 Application Screenshots
 
-### Heart Disease Model
+Add screenshots here:
 
-* Algorithm: Machine Learning Classification Model
-* Model File:
+screenshots/
 
-```text
-heart_model.pkl
-```
+├── home.png
+├── input.png
+├── prediction.png
+└── result.png
+🎯 Future Enhancements
 
-### Diabetes Prediction Model
+🚀 Add more disease prediction models
+🚀 Integrate real-time health monitoring
+🚀 Improve model accuracy with advanced algorithms
+🚀 Add AI medical assistant features
+🚀 Deploy as a mobile healthcare application
+🚀 Cloud-based model hosting
 
-* Algorithm: Machine Learning Classification Model
-* Model File:
+👩‍💻 Author
+Ananya K
 
-```text
-diabetes_model.pkl
-```
+Full Stack & AI Developer
 
-### Parkinson's Disease Model
+Connect With Me
 
-* Algorithm: Machine Learning Classification Model
-* Model File:
+GitHub:
 
-```text
-parkinson_model.pkl
-```
+https://github.com/ananyadevanga139-jpg
 
-## 🎯 Future Enhancements
+LinkedIn:
 
-* Add more disease prediction modules.
-* Improve model accuracy using advanced algorithms.
-* Add user authentication.
-* Store prediction history.
-* Integrate healthcare APIs.
+https://www.linkedin.com/in/ananya-k-741310325/
 
-## 👩‍💻 Developed By
+Portfolio:
 
-**Ananya K**
+https://personal-portfolio-website-r80y3p6a0-ananya-3073.vercel.app
+
+⭐ Support
+
+If you like this project, consider giving it a star on GitHub.
